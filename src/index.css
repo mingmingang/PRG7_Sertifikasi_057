@@ -1,0 +1,232 @@
+/* Import Google Font Poppins (jika belum ada di HTML) */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> */
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(33, 37, 41, 0.87);
+  background-color: #f5f7fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset dasar */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit; /* turunkan dari :root */
+}
+
+/* Link */
+a {
+  font-weight: 500;
+  color: #4f46e5;
+  text-decoration: none;
+}
+a:hover {
+  color: #3730a3;
+}
+
+/* Container utama */
+.container {
+  max-width: 960px;
+  width: 100%;
+  padding: 2rem;
+  font-family: inherit;
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+}
+
+.table thead {
+  background-color: #22c55e;
+  color: white;
+}
+
+.table thead th {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+  background-color: #f0fdf4;
+}
+
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Jika tidak ada data */
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.text-muted {
+  color: #9ca3af !important;
+  font-family: inherit;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+/* Warna button */
+.btn-success {
+  background-color: #22c55e;
+  color: white;
+}
+.btn-success:hover {
+  background-color: #16a34a;
+}
+
+.btn-info {
+  background-color: #3b82f6;
+  color: white;
+}
+.btn-info:hover {
+  background-color: #2563eb;
+}
+
+.btn-warning {
+  background-color: #facc15;
+  color: #1f2937;
+}
+.btn-warning:hover {
+  background-color: #eab308;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive Table (mobile friendly) */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+  
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+    color: #6b7280;
+    font-family: inherit;
+  }
+
+  .table tbody tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+
+/* Custom input styling */
+.custom-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #374151;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.custom-input:hover {
+  border-color: #a3bffa;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
+}
