@@ -79,7 +79,7 @@ export default function TambahJenisLayanan() {
                 Simpan
               </button>
               <button type="button" className="btn btn-warning btn-lg" style={{ marginLeft: "20px" }}>
-                <Link to="/jenis-layanan" className="text-decoration-none">
+                <Link to="/jenisLayanan" className="text-decoration-none">
                   &larr; Kembali ke Daftar Jenis Layanan
                 </Link>
               </button>

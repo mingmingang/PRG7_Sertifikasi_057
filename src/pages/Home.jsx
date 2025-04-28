@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import service from "../assets/image.png";
+import girl from "../assets/girl.png";
+import boy from "../assets/boy.png";
+import girl2 from "../assets/girl2.png";
+import srv from "../assets/service.png";
+import testimonial from "../assets/Testimonial.png";
+import service1 from "../assets/image.png";
+import service2 from "../assets/servicee2.jpg";
+import service3 from "../assets/ser.jpg";
+
+
+function HeroSlider() {
+  const images = [service1, service2, service3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Ganti gambar setiap 3 detik
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="text-center mb-5" style={{ marginTop: "20px" }}>
+      <img
+        style={{ borderRadius: "20px" }}
+        src={images[currentImageIndex]}
+        alt="Hero Image"
+        className="img-fluid rounded-3 shadow-lg"
+      />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -21,12 +53,13 @@ export default function Home() {
 
       {/* Hero Image */}
       <div className="text-center mb-5 " style={{marginTop:"20px"}}>
-        <img 
+        {/* <img 
           style={{borderRadius:"20px"}}
           src={service}
           alt="Hero Image"
           className="img-fluid rounded-3 shadow-lg"
-        />
+        /> */}
+        <HeroSlider/>
       </div>
 
       {/* Statistic Cards */}
@@ -65,8 +98,9 @@ export default function Home() {
           <div className="col-md-4">
             <div className="card shadow">
               <img 
-                src="https://images.unsplash.com/photo-1529673191160-51a582264d5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjA1fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400"
+                src={girl}
                 alt="Customer 1"
+                style={{height:"600px", objectFit:"cover"}}
                 className="card-img-top rounded-3"
               />
               <div className="card-body">
@@ -78,7 +112,8 @@ export default function Home() {
           <div className="col-md-4">
             <div className="card shadow">
               <img 
-                src="https://images.unsplash.com/photo-1512290391891-10126b2ab232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjA1fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400"
+                src={boy}
+                style={{height:"600px", objectFit:"cover"}}
                 alt="Customer 2"
                 className="card-img-top rounded-3"
               />
@@ -91,7 +126,8 @@ export default function Home() {
           <div className="col-md-4">
             <div className="card shadow">
               <img 
-                src="https://images.unsplash.com/photo-1518709268805-c7d48e274da8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjA1fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400"
+                src={girl2}
+                style={{height:"600px", objectFit:"cover"}}
                 alt="Customer 3"
                 className="card-img-top rounded-3"
               />
@@ -119,7 +155,8 @@ export default function Home() {
         <div className="col-md-6">
           <div className="card shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1531493982124-d6f96d241ea0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjA1fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=600"
+              src={srv}
+              style={{height:"300px", objectFit:"cover"}}
               alt="Information"
               className="card-img-top rounded-3"
             />
@@ -132,7 +169,8 @@ export default function Home() {
         <div className="col-md-6">
           <div className="card shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1565264305-c10b1b4b7ec6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjA1fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=600"
+              src={testimonial}
+              style={{height:"300px", objectFit:"cover"}}
               alt="Testimonial"
               className="card-img-top rounded-3"
             />

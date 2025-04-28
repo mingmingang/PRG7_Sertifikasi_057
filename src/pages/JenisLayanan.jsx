@@ -76,7 +76,7 @@ export default function JenisLayanan() {
             {jenisLayanans.length === 0
               ? (
                 <tr>
-                  <td colSpan="3" className="text-center text-muted py-4">
+                  <td colSpan="4" className="text-center text-muted py-4">
                     Belum ada jenis layanan.
                   </td>
                 </tr>
@@ -94,7 +94,7 @@ export default function JenisLayanan() {
                       Lihat
                     </button>
                     <Link
-                      to={`/layanan/edit/${j.idJenisLayanan}`}
+                      to={`/jenisLayanan/edit/${j.idJenisLayanan}`}
                       className="btn btn-warning btn-sm me-2"
                     >
                       Edit

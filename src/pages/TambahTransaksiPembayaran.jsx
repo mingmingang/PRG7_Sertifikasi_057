@@ -138,7 +138,7 @@ export default function TambahTransaksiPembayaran() {
                 Simpan
               </button>
               <button type="button" className="btn btn-warning btn-lg" style={{ marginLeft: "20px" }}>
-                <Link to="/transaksi-pembayaran" className="text-decoration-none">
+                <Link to="/transaksiPembayaran" className="text-decoration-none">
                   &larr; Kembali ke Daftar Transaksi Pembayaran
                 </Link>
               </button>

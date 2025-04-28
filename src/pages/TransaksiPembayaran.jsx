@@ -79,7 +79,7 @@ export default function TransaksiPembayaran() {
             {transaksiPembayarans.length === 0
               ? (
                 <tr>
-                  <td colSpan="5" className="text-center text-muted py-4">
+                  <td colSpan="6" className="text-center text-muted py-4">
                     Belum ada transaksi pembayaran.
                   </td>
                 </tr>
